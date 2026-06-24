@@ -20,16 +20,16 @@ const tempoObjetivo2 = new Date("2027-02-08T00:00:00")
 const tempoObjetivo3 = new Date("2032-12-10T00:00:00")
 const tempoObjetivo4 = new Date("2038-12-01T00:00:00")
 
-const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
+const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
-function atualizaCronometro(){
-  for (let i=0; i<contadores.length;i++){
-     contadores[i].textContent = calculaTempo(tempos[i]);
-   }
+function atualizaCronometro() {
+  for (let i = 0; i < contadores.length; i++) {
+    contadores[i].textContent = calculaTempo(tempos[i]);
+  }
 }
 
 atualizaCronometro();
-setInterval(atualizaCronometro,1000);
+setInterval(atualizaCronometro, 1000);
 
 function calculaTempo(tempoObjetivo) {
   let tempoAtual = new Date()
@@ -42,7 +42,7 @@ function calculaTempo(tempoObjetivo) {
   segundos %= 60;
   minutos %= 60;
   horas %= 24;
- return (
+  return (
     dias +
     " dias " +
     horas +
