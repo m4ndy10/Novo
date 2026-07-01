@@ -35,20 +35,19 @@ function calculaTempo(tempoObjetivo) {
   segundos %= 60;
   minutos %= 60;
   horas %= 24;
-  if(tempoFinal > 0) {
-    
-  }
-
-  return (
+  if (tempoFinal > 0) {
+return (
     dias +
     " dias " +
     horas +
     " horas " +
-    minutos + 
+    minutos +
     " minutos " +
     segundos +
     " segundos"
   );
+  }
+
 }
 
 function atualizaCronometro() {
@@ -57,10 +56,10 @@ function atualizaCronometro() {
   }
 }
 
-function comecaCronometro(){
-  
+function comecaCronometro() {
+
   atualizaCronometro();
-setInterval(atualizaCronometro, 1000);
+  setInterval(atualizaCronometro, 1000);
 }
 
 comecaCronometro();
